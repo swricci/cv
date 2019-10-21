@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Quicksand&display=swap');
 
 /* Main text is monserrat*/
 body {
@@ -8,11 +8,11 @@ body {
   color: #444;
 }
 
-/* Give headers playfair font */
+/* Give headers Quicksand font */
 h1,
 h2,
 h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "Quicksand", sans-serif;
   color: #000;
 }
 

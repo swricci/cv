@@ -1,5 +1,5 @@
 ---
-title: Shannon Ricci's Resume"
+title: Shannon Ricci's Resume
 author: Shannon Ricci
 date: "`r Sys.Date()`"
 output:
@@ -56,8 +56,8 @@ Contact {#contact}
 
 - <i class="fa fa-envelope"></i> swbrown@ncsu.edu
 - <i class="fa fa-twitter"></i> swricci
-- <i class="fa fa-github"></i> github.com/nstrayer
-- <i class="fa fa-link"></i> [nickstrayer.me](http://nickstrayer.me/)
+- <i class="fa fa-github"></i> 
+- <i class="fa fa-link"></i> 
 - <i class="fa fa-phone"></i> (845) 803-2019
 
 
@@ -130,7 +130,7 @@ Selected Positions {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 ```{r}
-position_data %>% print_section('positions')
+#position_data %>% print_section('positions')
 ```
 
 Selected Writing {data-icon=newspaper}
@@ -138,7 +138,7 @@ Selected Writing {data-icon=newspaper}
 
 
 ```{r}
-position_data %>% print_section('writings')
+#position_data %>% print_section('writings')
 ```
 
 
