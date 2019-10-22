@@ -1,6 +1,6 @@
 ---
-title: "Nick Strayer's CV"
-author: Nick Strayer
+title: "Shannon Ricci CV"
+author: Shannon Ricci
 date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
@@ -19,7 +19,7 @@ library(glue)
 library(tidyverse)
 
 # Set this to true to have links turned into footnotes at the end of the document
-PDF_EXPORT <- FALSE
+PDF_EXPORT <- TRUE
 
 # Holds all the links that were inserted for placement at the end
 links <- c()
@@ -48,42 +48,37 @@ Aside
 ================================================================================
 
 
-![logo](beta_dist.png){width=100%}
-
 ```{r}
 # When in export mode the little dots are unaligned, so fix that. 
-if(PDF_EXPORT){
-  cat("View this CV online with links at _nickstrayer.me/cv_")
-} else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/nstrayer/cv/raw/master/strayer_cv.pdf)")
-}
+# if(PDF_EXPORT){
+#   cat("View this CV online with links at _nickstrayer.me/cv_")
+# } else {
+#   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/nstrayer/cv/raw/master/strayer_cv.pdf)")
+# }
 ```
 
 Contact {#contact}
 --------------------------------------------------------------------------------
 
 
-- <i class="fa fa-envelope"></i> nick.strayer@gmail.com
-- <i class="fa fa-twitter"></i> NicholasStrayer
-- <i class="fa fa-github"></i> github.com/nstrayer
-- <i class="fa fa-link"></i> [nickstrayer.me](http://nickstrayer.me/)
-- <i class="fa fa-phone"></i> (734) 645-0110
+- <i class="fa fa-envelope"></i> swbrown@ncsu.edu
+- <i class="fa fa-twitter"></i> swricci
+- <i class="fa fa-github"></i> github.com/swricci
+- <i class="fa fa-link"></i> 
+- <i class="fa fa-phone"></i> (845) 803-2019
 
 
 
-Language Skills {#skills}
+Skills {#skills}
 --------------------------------------------------------------------------------
 
 ```{r}
 skills <- tribble(
   ~skill,               ~level,
-  "R",                  5,
-  "Javascript (d3.js)", 4.5,
-  "Python",             4,
-  "Bash",               3.5,
-  "SQL",                3,
-  "C++",                3,
-  "AWK",                3
+  "MATLAB",                  5,
+  "R", 4,
+  "ArcGIS Pro",             4,
+  "QGIS", 3,
 )
 
 build_skill_bars(skills)
@@ -107,15 +102,13 @@ Last updated on `r Sys.Date()`.
 
 Main
 ================================================================================
-
-Nick Strayer {#title}
+Shannon Ricci {#title}
 --------------------------------------------------------------------------------
 
 
 ```{r}
-intro_text <- "I have made [visualizations viewed by hundreds of thousands of people](https://www.nytimes.com/interactive/2016/08/26/us/college-student-migration.html), [sped up query times for 25 terabytes of data by an average of 4,800 times](https://livefreeordichotomize.com/2019/06/04/using_awk_and_r_to_parse_25tb/), and built [packages for R](https://github.com/nstrayer/shinysense) that let you [do magic](http://nickstrayer.me/dataDayTexas/).
+intro_text <- "Interests: data analysis, data visualization, marine benthic biology and ecology, conservation, invertebrate fisheries, passive acoustics, informal environmental science education 
 
-Currently searching for a data science position that allows me to build tools using visualization and machine learning to help people explore and understand their data. 
 "
 
 cat(sanitize_links(intro_text))
@@ -141,26 +134,11 @@ print_section(position_data, 'research_positions')
 
 
 
-Industry Experience {data-icon=suitcase}
+Teaching & Outreach Experience {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 ::: aside
-I have worked in a variety of roles ranging from journalist to software engineer to data scientist. I like collaborative environments where I can learn from my peers. 
-:::
-
-```{r}
-print_section(position_data, 'industry_positions')
-```
-
-<br>
-<br>
-<br>
-
-Teaching Experience {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
-
-::: aside
-I am passionate about education. I believe that no topic is too complex if the teacher is empathetic and willing to think about new methods of approaching task. 
+I am passionate about science communication and enjoy translating results to non-scientists.
 :::
 
 ```{r}
@@ -168,28 +146,27 @@ print_section(position_data, 'teaching_positions')
 ```
 
 
-Selected Data Science Writing {data-icon=chart-line}
---------------------------------------------------------------------------------
-
-
-::: aside
-I regularly blog about data science and visualization on my blog [LiveFreeOrDichotomize.](https://livefreeordichotomize.com/)
-:::
-
-```{r}
-print_section(position_data, 'data_science_writings')
-```
-
-
-
-Selected Press (About)  {data-icon=newspaper}
+Publications {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
-print_section(position_data, 'about_me_press')
+print_section(position_data, 'academic_articles')
+```
+
+Selected Posters & Talks {data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+#print_section(position_data, 'presentations')
 ```
 
 
+Community Engagement {data-icon=handshake}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'community_engagement')
+```
 
 Selected Press (By)  {data-icon=newspaper}
 --------------------------------------------------------------------------------
@@ -197,17 +174,6 @@ Selected Press (By)  {data-icon=newspaper}
 ```{r}
 print_section(position_data, 'by_me_press')
 ```
-
-
-
-
-Selected Publications, Posters, and Talks {data-icon=book}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'academic_articles')
-```
-
 
 
 ```{r}
