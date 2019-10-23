@@ -31,15 +31,16 @@ source('parsing_functions.R')
 # First let's get the data, filtering to only the items tagged as
 # Resume items
 position_data <- read_csv('positions.csv') %>% 
-  filter(in_resume) %>% 
-  mutate(
-    # Build some custom sections by collapsing others
-    section = case_when(
-      section %in% c('research_positions', 'industry_positions') ~ 'positions', 
-      section %in% c('data_science_writings', 'by_me_press') ~ 'writings',
-      TRUE ~ section
-    )
-  ) 
+  filter(in_resume) 
+# %>% 
+#   #mutate(
+#     # Build some custom sections by collapsing others
+#     section = case_when(
+#       section %in% c('research_positions', 'industry_positions') ~ 'positions', 
+#       section %in% c('data_science_writings', 'by_me_press') ~ 'writings',
+#       TRUE ~ section
+#     )
+#   ) 
 
 ```
 
@@ -56,28 +57,25 @@ Contact {#contact}
 
 - <i class="fa fa-envelope"></i> swbrown@ncsu.edu
 - <i class="fa fa-twitter"></i> swricci
-- <i class="fa fa-github"></i> 
+- <i class="fa fa-github"></i> github.com/swricci
 - <i class="fa fa-link"></i> 
 - <i class="fa fa-phone"></i> (845) 803-2019
 
 
-
-Language Skills {#skills}
+Skills {#skills}
 --------------------------------------------------------------------------------
 
 
 ```{r}
-# skills <- tribble(
-#   ~skill,               ~level,
-#   "R",                  5,
-#   "Javascript (d3.js)", 4.5,
-#   "Python",             4,
-#   "Bash",               3.5,
-#   "SQL",                3,
-#   "C++",                3,
-#   "AWK",                3
-# )
-# build_skill_bars(skills)
+skills <- tribble(
+  ~skill,               ~level,
+  "MATLAB",                  5,
+  "R", 4,
+  "ArcGIS Pro",             4,
+  "QGIS", 3,
+)
+
+build_skill_bars(skills)
 ```
 
 
@@ -106,9 +104,7 @@ Shannon Ricci {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
-intro_text <- "Insert text here about me
-
-Currently searching for a data science position that allows me to build tools using visualization and machine learning to help people explore and understand their data. 
+intro_text <- "Interests: data analysis, data visualization, marine benthic biology and ecology, conservation, invertebrate fisheries, passive acoustics, informal environmental science education 
 "
 
 
@@ -126,19 +122,25 @@ position_data %>% print_section('education')
 
 
 
-Selected Positions {data-icon=suitcase}
+Research Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 ```{r}
-position_data %>% print_section('positions')
+position_data %>% print_section('research_positions')
+```
+
+Teaching & Outreach Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+position_data %>% print_section('teaching_positions')
 ```
 
 Selected Writing {data-icon=newspaper}
 --------------------------------------------------------------------------------
 
-
 ```{r}
-#position_data %>% print_section('writings')
+position_data %>% print_section('academic_articles')
 ```
 
 
