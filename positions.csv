@@ -1,5 +1,5 @@
 section,in_resume,title,loc,institution,start,end,description_1,description_2,description_3
-education,TRUE,"PhD Student, Geospatial Analytics",North Carolina State University,"Raleigh, NC",2018,2022,Working on characterization and interpretation of marine soundscapes,Advisor: Dr. DelWayne Bohnenstiehl,
+education,TRUE,"PhD Student, Geospatial Analytics",North Carolina State University,"Raleigh, NC",2018,2022,Advancing the characterization and interpretation of marine soundscapes through development of automated data processing techniques and integration of satellite imagery,Advisor: Dr. DelWayne Bohnenstiehl,
 education,TRUE,"M.S., Biological Oceanography",North Carolina State University,"Raleigh, NC",2013,2015,Thesis: Spatiotemporal soundscape patterns and processes in an estuarine reserve,Advisor: Dr. David Eggleston,
 education,TRUE,"B.S., Marine Science, Marine Biology concentration",University of Maine,"Orono, ME",2008,2012,Thesis: Salinity tolerance of the oyster mudworm Polydora websteri,,
 research_positions,TRUE,PhD Dissertation Research,Geophysics & Acoustics Lab,North Carolina State University,2018,2020,Develop automated acoustic data processing techniques,Characterize and interprete marine soundscapes,NA
