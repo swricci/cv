@@ -76,6 +76,7 @@ skills <- tribble(
   ~skill,               ~level,
   "MATLAB",                  5,
   "R", 4,
+  "Python", 2,
   "ArcGIS Pro",             4,
   "QGIS", 3,
 )
