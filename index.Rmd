@@ -63,7 +63,7 @@ Contact {#contact}
 
 - <i class="fa fa-envelope"></i> swbrown@ncsu.edu
 - <i class="fa fa-twitter"></i> swricci
-- <i class="fa fa-github"></i> github.com/swricci
+- <i class="fa fa-github"></i> [github.com/swricci](https://github.com/swricci)
 - <i class="fa fa-phone"></i> (845) 803-2019
 
 
@@ -107,7 +107,7 @@ Shannon Ricci {#title}
 
 
 ```{r}
-intro_text <- "Interests: data analysis, data visualization, marine benthic biology and ecology, conservation, invertebrate fisheries, passive acoustics, informal environmental science education 
+intro_text <- "Interests: data analysis, data visualization, marine benthic ecology, conservation, passive acoustics, informal environmental science education 
 
 "
 
@@ -134,14 +134,6 @@ print_section(position_data, 'research_positions')
 
 
 
-Teaching & Outreach Experience {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
-
-```{r}
-print_section(position_data, 'teaching_positions')
-```
-
-
 Publications {data-icon=book}
 --------------------------------------------------------------------------------
 
@@ -149,11 +141,22 @@ Publications {data-icon=book}
 print_section(position_data, 'academic_articles')
 ```
 
+
+
 Selected Presentations {data-icon=chart-line}
 --------------------------------------------------------------------------------
 
 ```{r}
 print_section_nodesc(position_data, 'presentations')
+```
+
+
+
+Teaching & Outreach Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'teaching_positions')
 ```
 
 
