@@ -62,7 +62,7 @@ Contact {#contact}
 
 
 - <i class="fa fa-envelope"></i> swbrown@ncsu.edu
-- <i class="fa fa-twitter"></i> swricci
+- <i class="fa fa-twitter"></i> @swricci
 - <i class="fa fa-github"></i> [github.com/swricci](https://github.com/swricci)
 - <i class="fa fa-phone"></i> (845) 803-2019
 
@@ -167,7 +167,7 @@ Community Engagement {data-icon=handshake}
 print_section_nodesc(position_data, 'community_engagement')
 ```
 
-Selected Press (By)  {data-icon=newspaper}
+Selected Press  {data-icon=newspaper}
 --------------------------------------------------------------------------------
 
 ```{r}
