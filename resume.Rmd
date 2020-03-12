@@ -86,7 +86,7 @@ More info {#more-info}
 --------------------------------------------------------------------------------
 
 To view my full CV and a more complete list of positions and publications, go to:
-[swricci.github.io/cv](swricci.github.io/cv)
+[swricci.github.io/cv/](https://swricci.github.io/cv/)
 
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
