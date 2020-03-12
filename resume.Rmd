@@ -6,7 +6,7 @@ output:
   pagedown::html_resume:
     css: ['css/custom_resume.css', 'css/styles.css', 'resume']
     # set it to true for a self-contained HTML page but it'll take longer to render
-    self_contained: false
+    self_contained: true
 
 ---
 
@@ -53,13 +53,11 @@ Aside
 Contact {#contact}
 --------------------------------------------------------------------------------
 
-
-
 - <i class="fa fa-envelope"></i> swbrown@ncsu.edu
-- <i class="fa fa-twitter"></i> swricci
-- <i class="fa fa-github"></i> github.com/swricci
-- <i class="fa fa-link"></i> 
+- <i class="fa fa-twitter"></i> @swricci
+- <i class="fa fa-github"></i> [github.com/swricci](https://github.com/swricci)
 - <i class="fa fa-phone"></i> (845) 803-2019
+
 
 
 Skills {#skills}
@@ -67,10 +65,15 @@ Skills {#skills}
 
 
 ```{r}
+library(tidyverse)
+library(glue)
+source('parsing_functions.R')
+
 skills <- tribble(
   ~skill,               ~level,
   "MATLAB",                  5,
   "R", 4,
+  "Python", 2,
   "ArcGIS Pro",             4,
   "QGIS", 3,
 )
@@ -82,8 +85,8 @@ build_skill_bars(skills)
 More info {#more-info}
 --------------------------------------------------------------------------------
 
-See full CV at for more complete list of positions and publications.
-
+To view my full CV and a more complete list of positions and publications, go to:
+[swricci.github.io/cv](swricci.github.io/cv)
 
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
@@ -104,9 +107,9 @@ Shannon Ricci {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
-intro_text <- "Interests: data analysis, data visualization, marine benthic biology and ecology, conservation, invertebrate fisheries, passive acoustics, informal environmental science education 
-"
+intro_text <- "Interests: data analysis, data visualization, marine benthic ecology, conservation, passive acoustics, informal environmental science education 
 
+"
 
 cat(sanitize_links(intro_text))
 ```
@@ -122,21 +125,16 @@ position_data %>% print_section('education')
 
 
 
-Research Experience {data-icon=suitcase}
+Research Experience {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r}
 position_data %>% print_section('research_positions')
 ```
 
-Teaching & Outreach Experience {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
 
-```{r}
-position_data %>% print_section('teaching_positions')
-```
 
-Selected Writing {data-icon=newspaper}
+Selected Publications {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -144,3 +142,25 @@ position_data %>% print_section('academic_articles')
 ```
 
 
+
+Selected Presentations {data-icon=chart-line}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section_nodesc(position_data, 'presentations')
+```
+
+
+Teaching & Outreach Experience {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+:::aside
+Research-related press:
+
+[Remote Sensing and the Science of Sound](https://cnr.ncsu.edu/geospatial/news/2020/01/30/remote-sensing-and-the-science-of-sound/)
+
+[Music in the Marsh: The Summer Soundscapes of the Rachel Carson Reserve](https://ncseagrant.ncsu.edu/coastwatch/previous-issues/2015-2/summer-2015/music-in-the-marsh-the-summer-soundscapes-of-the-rachel-carson-reserve/)
+:::
+
+```{r}
+position_data %>% print_section('teaching_positions')
+```

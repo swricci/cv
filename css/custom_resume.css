@@ -16,7 +16,7 @@
 }
 
 .main-block {
-  margin-top: 0;
+  margin-top: 0.1; /* changed from 0 to 0.1 SRicci*/
   margin-left: -0.1in;
 }
 
